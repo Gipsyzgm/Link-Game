@@ -7,7 +7,7 @@ public class AdmobGA : MonoBehaviour
 {
 
     public static AdmobGA load;     // instance of this class
-    public GoogleAnalyticsV3 GA;    // instance of Google Analytics 
+   
 
     void Awake()
     {
@@ -25,7 +25,7 @@ public class AdmobGA : MonoBehaviour
     void Start()
     {
         // Start Session Google Analytics
-        GA.StartSession();
+     
         // Request banner Google Admob
         GoogleMobileAdsScript.advertise.RequestBanner();
     }
