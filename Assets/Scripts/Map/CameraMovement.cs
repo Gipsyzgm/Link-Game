@@ -40,7 +40,7 @@ public class CameraMovement : MonoBehaviour
     {
         setLastpos();
         SetPoint();
-        //GoogleMobileAdsScript.advertise.HideBanner();
+        AdControl.instance.HideBannerAd();
     }
 
     void Update()

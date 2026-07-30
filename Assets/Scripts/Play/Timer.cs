@@ -224,7 +224,7 @@ public class Timer : MonoBehaviour
     {
         if (isAds)
         {
-            //GoogleMobileAdsScript.advertise.ShowInterstitial();
+            AdControl.instance.ShowVideoAd();
             isAds = false;
             isreq = false;
         }
@@ -262,7 +262,7 @@ public class Timer : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(119f);
+            yield return new WaitForSeconds(5f);
             isAds = true;
         }
     }

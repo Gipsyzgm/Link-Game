@@ -18,8 +18,9 @@ public class WinUI : MonoBehaviour {
 
     void Start()
     {
-		Advertisement.Initialize ("1004160");
-		if(Advertisement.isReady()){ Advertisement.Show(); }
+	
+        AdControl.instance.ShowVideoAd();
+        
         TimeBonus.text = ((int)Mathf.Abs(Timer.timer.GameTime)).ToString();
 
         playerScore = getGameScore(PLayerInfo.Info.Score,Timer.timer.GameTime);

@@ -3,7 +3,7 @@ using System.Collections;
 public class Ads : MonoBehaviour
 {
 
-    string ModeName;        // mode of game - Arcede or classic
+    string ModeName;        
     void Start()
     {
         if (PLayerInfo.MODE == 1)
@@ -11,15 +11,8 @@ public class Ads : MonoBehaviour
         else
             ModeName = "CLASSIC ";
         MusicController.Music.BG_play();
-
-        // check show admob interstitial or no
-        if (!Timer.timer.isreq)
-        {
-            //GoogleMobileAdsScript.advertise.RequestInterstitial();
-            Timer.timer.isreq = true;
-        }
         // show banner
-        //GoogleMobileAdsScript.advertise.ShowBanner();
+        AdControl.instance.ShowBannerAd();
 
         // request Google Analytics
         //AdmobGA.load.GA.LogScreen(ModeName + "Level: " + PLayerInfo.MapPlayer.Level);

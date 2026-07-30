@@ -46,7 +46,7 @@ MonoBehaviour:
   runtimeEnv: 0
   framework: 0
   architecture: 2
-  miniApkVersion: 0
+  miniApkVersion: 1
   scriptingBackend: 0
   NativeWhiteListRegex:
   - com.bytedance.starksdk

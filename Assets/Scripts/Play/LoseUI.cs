@@ -14,8 +14,7 @@ public class LoseUI : MonoBehaviour
 
     void Start()
     {
-		Advertisement.Initialize ("1004160");
-		if(Advertisement.isReady()){ Advertisement.Show(); }
+		AdControl.instance.ShowVideoAd();
         if (PLayerInfo.MODE != 1)
             playerScore = PLayerInfo.Info.Score + (PLayerInfo.MapPlayer.Level - 1) * 5000;
         else
