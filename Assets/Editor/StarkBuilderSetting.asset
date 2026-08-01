@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StarkBuilderSetting
   m_EditorClassIdentifier: 
   tag: 0
-  wasmResourceUrl: 
+  wasmResourceUrl: http://
   OutputDir: D:\Fork\Link-Game\tt-minigame
   useByteAudioAPI: 0
   wasmMemorySize: 128
@@ -39,12 +39,12 @@ MonoBehaviour:
   iOSDevicePixelRatio: 0
   urlCacheList: []
   dontCacheFileNames: []
-  isDevBuild: 0
+  isDevBuild: 1
   stripEngineCode: 0
   appHost: 2
   compressMethod: 1
   runtimeEnv: 0
-  framework: 0
+  framework: 1
   architecture: 2
   miniApkVersion: 1
   scriptingBackend: 0
@@ -54,12 +54,12 @@ MonoBehaviour:
   _appId: tt8af3fc4e1496f44c07
   version: 
   autoVersion: 0
-  _webglPackagePath: 
+  _webglPackagePath: D:\Fork\Link-Game\tt-minigame\webgl_package-20260801_125410.zip
   _orientation: 0
   _iOSPerformancePlus: 0
   _menuButtonStyle: 0
   _publishType: 0
   publishDesc: 
-  idePath: 
+  idePath: "C:/Program Files/@bytedminiprogram-ide/\u6296\u97F3\u5F00\u53D1\u8005\u5DE5\u5177.exe"
   isConvert: 0
   isOldBuildFormat: 1
