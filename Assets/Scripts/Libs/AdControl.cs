@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TTSDK;
+using TTSDK.UNBridgeLib.LitJson;
 using UnityEngine.Serialization;
 
 public class AdControl : MonoBehaviour
@@ -174,5 +175,36 @@ public class AdControl : MonoBehaviour
     {
         CreatVideoAd();
         CreatBannerAd();
+        TT.CheckScene(TTSideBar.SceneEnum.SideBar, b =>
+        {
+            Debug.Log("check scene success，"+b );
+        }, () =>
+        {
+            Debug.Log("check scene complete");
+        }, (errCode, errMsg) =>
+        {
+            Debug.Log($"check scene error, errCode:{errCode}, errMsg:{errMsg}");
+        });
+    }
+    /// <summary>
+    /// 打开侧边栏
+    /// </summary>
+    public void OpenSideSlider()
+    {
+        Debug.LogError("点击 navigate to scene");
+       var data = new JsonData
+       {
+           ["scene"] = "sidebar",
+       };
+       TT.NavigateToScene(data, () =>
+       {
+           Debug.Log("navigate to scene success");
+       }, () =>
+       {
+           Debug.Log("navigate to scene complete");
+       }, (errCode,errMsg) =>
+       {
+           Debug.Log($"navigate to scene error, errCode:{errCode}, errMsg:{errMsg}");
+       });
     }
 }

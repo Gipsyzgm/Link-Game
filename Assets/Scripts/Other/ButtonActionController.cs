@@ -113,4 +113,15 @@ public class ButtonActionController : MonoBehaviour
             button.overrideSprite = ButtonSprite[2];
         }
     }
+    
+    /// <summary>
+    /// 打开侧边栏
+    /// </summary>
+    /// <param name="button"></param>
+    public void OpenSideSlider()
+    {
+       AdControl.instance.OpenSideSlider();
+    }
+    
+    
 }
