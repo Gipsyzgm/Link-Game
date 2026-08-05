@@ -25,6 +25,10 @@ public class AdControl : MonoBehaviour
     private TTBannerStyle m_style = new TTBannerStyle();
     private TTBannerAd _bannerAd;
     public int rewardType = 0;
+    /// <summary>
+    /// 时间间隔
+    /// </summary>
+    public int adInterval = 5;
     
     public string bannerAdID = "an14ib5i6ueijn10kf";
     public string videoAdID = "e2hn7qqic34pda4hik";
@@ -54,12 +58,37 @@ public class AdControl : MonoBehaviour
             Debug.Log($"激励视频奖励类型为{rewardType}");
             if (rewardType == 0)
             {
-              
+                if (DataLoader.Data)
+                { 
+                    DataLoader.Data.VideoAdBtn.SetActive(false);
+                    DataLoader.Data.UnlockNewLevel();
+                    Invoke(nameof(DoSomething), adInterval);
+
+                   
+                }
             }
-            
+        }
+        else
+        {
+            Debug.Log($"激励视频奖励不可用");
         }
      
     }
+    void DoSomething()
+    {
+       
+        if (DataLoader.Data)
+        { 
+            Debug.Log("Invoke延时触发");
+            DataLoader.Data.VideoAdBtn.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("找不到不触发");
+        }
+        
+    }
+    
     void OnVideoAdError(int iErrCode, string errMsg)
     {
         Debug.Log($"激励视频错误 errorCode: {iErrCode}");

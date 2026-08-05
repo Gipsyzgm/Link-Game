@@ -1,6 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.UI;
 
 public class Home : MonoBehaviour
 {
@@ -15,14 +13,14 @@ public class Home : MonoBehaviour
         // Exit game if click Escape key or back on mobile
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            ExitOK();
+            ExitOk();
         }
     }
 
     /// <summary>
     /// Exit game
     /// </summary>
-    public void ExitOK()
+    public void ExitOk()
     {
         Application.Quit();
     }
