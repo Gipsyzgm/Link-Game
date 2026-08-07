@@ -992,7 +992,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rewardType: 0
-  adInterval: 5
+  adInterval: 180
   bannerAdID: an14ib5i6ueijn10kf
   videoAdID: e2hn7qqic34pda4hik
 --- !u!4 &1065468137

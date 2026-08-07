@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using TTSDK;
 using TTSDK.UNBridgeLib.LitJson;
-using UnityEngine.Serialization;
 
 public class AdControl : MonoBehaviour
 {
@@ -23,13 +22,13 @@ public class AdControl : MonoBehaviour
     }
     
     private TTRewardedVideoAd _rvideoAd;
-    private TTBannerStyle m_style = new TTBannerStyle();
+    private readonly TTBannerStyle _mStyle = new TTBannerStyle();
     private TTBannerAd _bannerAd;
-    public int rewardType = 0;
+    public int rewardType;
     /// <summary>
     /// 时间间隔
     /// </summary>
-    public int adInterval = 5;
+    public int adInterval = 180;
     
     public string bannerAdID = "an14ib5i6ueijn10kf";
     public string videoAdID = "e2hn7qqic34pda4hik";
@@ -102,9 +101,9 @@ public class AdControl : MonoBehaviour
     
     public void CreatBannerAd()
     {
-        m_style.top = 10;
-        m_style.left = 10;
-        m_style.width = 320;
+        _mStyle.top = 10;
+        _mStyle.left = 10;
+        _mStyle.width = 320;
 
         if (_bannerAd != null && _bannerAd.IsInvalid())
         {
@@ -116,7 +115,7 @@ public class AdControl : MonoBehaviour
             var param = new CreateBannerAdParam
             {
                 BannerAdId = bannerAdID,
-                Style = m_style,
+                Style = _mStyle,
                 AdIntervals = 60
             };
             _bannerAd = TT.CreateBannerAd(param);
@@ -161,10 +160,10 @@ public class AdControl : MonoBehaviour
     //修改尺寸
     private void ResizeBannerAd()
     {
-        m_style.top = int.Parse("10");
-        m_style.left = int.Parse("10");
-        m_style.width = int.Parse("320");
-        _bannerAd?.ReSize(m_style);
+        _mStyle.top = int.Parse("10");
+        _mStyle.left = int.Parse("10");
+        _mStyle.width = int.Parse("320");
+        _bannerAd?.ReSize(_mStyle);
     }
     //销毁广告实例
     private void DestroyBannerAd()

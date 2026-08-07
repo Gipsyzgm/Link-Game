@@ -3,7 +3,7 @@
   "projectname": "欢趣探险志",
   "unity": {
     "build": {
-      "webgl": "D:\\Fork\\Link-Game\\tt-minigame\\webgl_package-20260805_231327.zip",
+      "webgl": "D:\\Fork\\Link-Game\\tt-minigame\\webgl_package-20260806_130859.zip",
       "native": {
         "il2cpp": "tt-minigame\\tt-minigame\\native\\full-0.1-v1-IL2CPP.symbols.zip",
         "apk": "tt-minigame\\tt-minigame\\native\\full.apk",
