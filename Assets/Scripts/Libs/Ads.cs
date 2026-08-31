@@ -12,7 +12,7 @@ public class Ads : MonoBehaviour
             ModeName = "CLASSIC ";
         MusicController.Music.BG_play();
         // show banner
-        AdControl.instance.ShowBannerAd();
+        //AdControl.instance.ShowBannerAd();
 
         // request Google Analytics
         //AdmobGA.load.GA.LogScreen(ModeName + "Level: " + PLayerInfo.MapPlayer.Level);

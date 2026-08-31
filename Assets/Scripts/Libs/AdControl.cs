@@ -31,7 +31,7 @@ public class AdControl : MonoBehaviour
     public int adInterval = 180;
     
     public string bannerAdID = "an14ib5i6ueijn10kf";
-    public string videoAdID = "e2hn7qqic34pda4hik";
+    public string videoAdID = "3admbjb9cg7a1f6lgl";
     public void CreatVideoAd()
     {
         string videoAdId = videoAdID;
@@ -173,7 +173,7 @@ public class AdControl : MonoBehaviour
     void Start()
     {
         CreatVideoAd();
-        CreatBannerAd();
+        //CreatBannerAd();
         TT.CheckScene(TTSideBar.SceneEnum.SideBar, b =>
         {
             Debug.Log("check scene success，"+b );

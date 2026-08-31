@@ -40,7 +40,7 @@ public class CameraMovement : MonoBehaviour
     {
         setLastpos();
         SetPoint();
-        AdControl.instance.HideBannerAd();
+        //AdControl.instance.HideBannerAd();
     }
 
     void Update()

@@ -4,7 +4,7 @@ public class Home : MonoBehaviour
 {
     void Start()
     {
-        AdControl.instance.HideBannerAd();
+        //AdControl.instance.HideBannerAd();
         MusicController.Music.BG_menu();
     }
 
